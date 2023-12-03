@@ -4,9 +4,9 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="container mx-auto pt-20">
-        <div className="grid gap-4 p-5 sm:grid-cols-1 lg:grid:cols-5 md:grid-cols-5">
-          <div className="flex flex-col gap-4">
+      <div className="container mx-auto mt-20">
+        <div className="grid  lg:pl-40 lg:pr-40 md:pl-40 md:pr-40  sm:grid-cols-1 lg:grid:cols-5 md:grid-cols-5 ">
+          <div className="flex flex-col gap-4 lg:pl-11 md:pl-11">
             <h1 className="text-lg font-bold text-green">About</h1>
             <div className="flex flex-col gap-3">
               <span className="overflow-hidden text-sm font-light tracking-tight">
@@ -14,7 +14,7 @@ function Footer() {
                 industry.
               </span>
             </div>
-            <div className="items-start">
+            <div className="item-center">
               <h1 className="font-bold text-green">Contact with us</h1>
             </div>
             <div className="flex flex-wrap gap-8">
@@ -118,7 +118,7 @@ function Footer() {
                 </p>
                 <a
                   href="https://ideapreneurnepal.com/contact"
-                  className="hover:text-green"
+                  className=" bg-green p-2 rounded-xl text-white"
                 >
                   Subscribe
                 </a>
@@ -126,9 +126,9 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center w-full">
-          <hr className="w-11/12 h-px border-0 bg-gray" />
-          <span className="pb-2 text-lg font-light text-green">
+        <div className="flex flex-col items-center w-full pb-10 pt-10">
+          <hr className="w-11/12 h-px border-0 bg-grey" />
+          <span className="text-lg font-light text-green">
             Copyright ©2023 2023 Ideapreneur Nepal
           </span>
         </div>

@@ -2,16 +2,43 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Idpn_logo from "../../../public/logo.jpg";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const navbarToggle = () => {
     setIsMobile(!isMobile);
   };
+  const pathname = usePathname();
+
+  const Links = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Courses",
+      href: "https://moneymitra.com/course/all/",
+    },
+    {
+      name: "Contact",
+      href: "https://ideapreneurnepal.com/contact",
+    },
+    {
+      name: "Insights",
+      href: "https://moneymitra.com/posts/",
+    },
+  ];
+
   return (
     <>
       <nav className="sticky top-0 z-50 flex justify-around p-5 bg-white">
-        <a href="https://ideapreneurnepal.com/">
+        <Link href="https://ideapreneurnepal.com/">
           <Image
             src={Idpn_logo}
             alt="image"
@@ -19,13 +46,19 @@ function Header() {
             height={50}
             className="rounded-full"
           />
-        </a>
+        </Link>
         <div className=" gap-10 items-center hidden  md:flex">
-          <a href="https://ideapreneurnepal.com/">Home</a>
-          <a href="https://ideapreneurnepal.com/about">About</a>
-          <a href="https://moneymitra.com/course/all/">Courses</a>
-          <a href="https://ideapreneurnepal.com/contact">Contact</a>
-          <a href="https://moneymitra.com/posts/">Insights</a>
+          {Links.map((i, idx) => {
+           return <a
+              key={idx}
+              href={i.href}
+              className={`hover:text-green ${
+                pathname === i.href ? "text-green hover:text-green" : ""
+              }`}
+            >
+              <span>{i.name}</span>
+            </a>;
+          })}
         </div>
         <div></div>
         <div className="pt-1 md:hidden lg:hidden">
