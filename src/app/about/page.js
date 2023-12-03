@@ -5,8 +5,8 @@ import AboutSvg from "../../../public/about-us-banner.svg"
 
 export function generateMetadata({ params }) {
   return {
-    title:"About"
-  }
+    title: "Ideapreneur-Landing About",
+  };
 }
 
 function AboutPage() {

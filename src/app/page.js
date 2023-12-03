@@ -5,7 +5,7 @@ import SectionTwo from "./components/sectiontwo";
 
 export function generateMetadata({ params }) {
   return {
-    title: "Home",
+    title: "Ideapreneur-Landing Home",
   };
 }
 export default function Home() {

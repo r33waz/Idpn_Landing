@@ -49,7 +49,7 @@ function Header() {
         </Link>
         <div className=" gap-10 items-center hidden  md:flex">
           {Links.map((i, idx) => {
-           return <a
+           return <Link
               key={idx}
               href={i.href}
               className={`hover:text-green ${
@@ -57,7 +57,7 @@ function Header() {
               }`}
             >
               <span>{i.name}</span>
-            </a>;
+            </Link>;
           })}
         </div>
         <div></div>

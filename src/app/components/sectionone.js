@@ -52,7 +52,7 @@ function SectionOne() {
             className="lg:w-[1/2] bg-white"
           />
           <Fade right>
-            <div className="absolute bg-grey -right-48 lg:visible md:visible -bottom-20 w-5/6 h-5/6  -z-50"></div>
+            <div className="absolute bg-green -right-20 lg:visible md:visible -bottom-20 w-5/6 h-5/6  -z-50"></div>
           </Fade>
         </div>
       </div>
